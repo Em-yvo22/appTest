@@ -1,0 +1,19 @@
+{
+  "name": "apptest",
+  "version": "1.0.0",
+  "description": "Hopefully last test",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Em-yvo22/appTest.git"
+  },
+  "author": "Em-yvo22",
+  "license": "ISC",
+  "homepage": "https://github.com/Em-yvo22/appTest#readme",
+  "devDependencies": {
+    "electron": "^30.0.2"
+  }
+}
