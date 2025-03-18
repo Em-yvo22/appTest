@@ -1,9 +1,8 @@
-const {contextBridge, ipcRenderer } = require('electron');
+const { contextBridge, ipcRenderer } = require('electron');
 
 contextBridge.exposeInMainWorld('createButtonAPI', {
-    replaceWindow: (newWindow) =>{
+    replaceWindow: (newWindow) => {
         ipcRenderer.send('replace-window', newWindow)
-}
-})
-
+    }
+});
 

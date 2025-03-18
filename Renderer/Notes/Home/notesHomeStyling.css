@@ -1,14 +1,62 @@
 body{
+    display: flex;
+    flex-direction: column;
     background-color: #303030;
     color: whitesmoke;
     text-align: center;
+    margin-left: 0;
+}
+
+#sidebarButtonContainer{
+    display: flex;
+    margin: none;
+    flex-flow: column;
+}
+
+#sidebarButton{
+    align-self: flex-start;
+    position: sticky;
+    top: 5%;
+    font-size: large;
+    font-weight: 700;
+    margin-left: 5%;
+}
+
+@keyframes sidebar{
+    from {width: 0%;}
+    to {width: 20%;}
+}
+
+@keyframes sidebarContent {
+    from {opacity: 0; transform: translateX(-20%);}
+    to {opacity: 1; transform: translateX(0);}
+}
+
+#sidebar{
+    height: 100%;
+    width: 0%;
+    display: none;
+    flex-flow: column;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: 0;
+    background-color: rgb(64, 64, 64);
+    animation-name: sidebar;
+    animation-duration: 0.7s;
+}
+
+button.sidebarButton{
+    background-color: rgb(64, 64, 64);
+    animation-name: sidebarContent;
+    animation-duration: 1s;
 }
 
 button{
     font-family: 'Times New Roman', serif;
     font-size: medium;
-    background-color: whitesmoke;
-    color: #303030;
+    background-color: #303030;
+    color: whitesmoke;
     border: none;
     border-radius: 7px;
     padding: 0.5em;
@@ -16,5 +64,6 @@ button{
 
 button:hover{
     background-color: #303030;
-    color: whitesmoke;
+    color: gray;
+    cursor: pointer;
 }

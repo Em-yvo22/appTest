@@ -16,6 +16,7 @@ function initialBrowserWindow() {
 };
 app.on('ready',  () => {initialBrowserWindow()});
 
+//Open a new window and close the current
 function replaceWindow (event, newWindow){
     const currentWindow = BrowserWindow.getFocusedWindow();
     const replacement = new BrowserWindow({
@@ -31,5 +32,6 @@ function replaceWindow (event, newWindow){
     replacement.loadFile(newWindow);
     currentWindow.close();
 }
-
 ipcMain.on('replace-window', replaceWindow)
+
+//Open and close a sidebar
