@@ -1,38 +1,63 @@
-body{
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    app-region: drag;
+}
+
+body {
     display: flex;
     flex-direction: column;
     background-color: #303030;
     color: whitesmoke;
     text-align: center;
-    margin-left: 0;
+    height: 100vh;
 }
 
-#sidebarButtonContainer{
+h1 {
+    width: 50%;
+    align-self: center;
+    margin: 0.5em;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#overall {
     display: flex;
-    margin: none;
+    margin: 0;
+    margin-bottom: 0.5em;
+    height: 100%; 
+}
+
+#sidebarButtonContainer {
+    display: flex;
+    margin-left: 0;
     flex-flow: column;
 }
 
-#sidebarButton{
+#sidebarButton {
     align-self: flex-start;
     position: sticky;
     top: 5%;
     font-size: large;
     font-weight: 700;
-    margin-left: 5%;
+    margin-left: 1em;
+    app-region: no-drag;
 }
 
-@keyframes sidebar{
-    from {width: 0%;}
-    to {width: 20%;}
+@keyframes sidebar {
+    from { width: 0%; }
+    to { width: 10em; }
 }
 
 @keyframes sidebarContent {
-    from {opacity: 0; transform: translateX(-20%);}
-    to {opacity: 1; transform: translateX(0);}
+    from { opacity: 0; transform: translateX(-20%); }
+    to { opacity: 1; transform: translateX(0); }
 }
 
-#sidebar{
+#sidebar {
     height: 100%;
     width: 0%;
     display: none;
@@ -41,18 +66,19 @@ body{
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     margin-left: 0;
-    background-color: rgb(64, 64, 64);
+    background-color: rgb(60, 60, 60);
     animation-name: sidebar;
     animation-duration: 0.7s;
 }
 
-button.sidebarButton{
-    background-color: rgb(64, 64, 64);
+button.sidebarButton {
+    background-color: transparent;
     animation-name: sidebarContent;
     animation-duration: 1s;
+    app-region:no-drag;
 }
 
-button{
+button {
     font-family: 'Times New Roman', serif;
     font-size: medium;
     background-color: #303030;
@@ -60,10 +86,22 @@ button{
     border: none;
     border-radius: 7px;
     padding: 0.5em;
+    app-region:no-drag;
 }
 
-button:hover{
+button:hover {
     background-color: #303030;
     color: gray;
     cursor: pointer;
+}
+
+#view1 {
+    display: flex;
+    background-color: rgb(60, 60, 60);
+    color: gray;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    margin-right: 1em;
+    margin-left: 1em;
 }

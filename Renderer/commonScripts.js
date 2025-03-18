@@ -1,14 +1,14 @@
 const sidebar = document.getElementById('sidebar');
 function openSidebar(){
     sidebar.style.display = 'flex';
-    sidebar.style.width = '20%'
-    document.getElementById('sidebarButton').innerHTML = '<'
+    sidebar.style.width = '10em'
+    document.getElementById('sidebarButton').innerHTML = '<<'
 }
 
 function closeSidebar(){
     sidebar.style.display = 'none';
     sidebar.style.width = '0%'
-    document.getElementById('sidebarButton').innerHTML = '>'
+    document.getElementById('sidebarButton').innerHTML = '>>'
 }
 
 const sidebarButton = document.getElementById('sidebarButton');

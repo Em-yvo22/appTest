@@ -1,15 +1,32 @@
-body{
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    app-region:drag;
+}
+
+body {
     display: flex;
     flex-direction: column;
     background-color: #303030;
     color: whitesmoke;
     text-align: center;
-    margin-left: 0;
+    height: 100vh;
+}
+
+h1 {
+    width: 50%;
+    align-self: center;
+    margin: 0.5em;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 #sidebarButtonContainer{
     display: flex;
-    margin-left: none;
+    margin-left: 0;
     flex-flow: column;
 }
 
@@ -19,12 +36,13 @@ body{
     top: 5%;
     font-size: large;
     font-weight: 700;
-    margin-left: 5%;
+    margin-left: 1em;
+    app-region:no-drag;
 }
 
 @keyframes sidebar{
     from {width: 0%;}
-    to {width: 20%;}
+    to {width: 10em;}
 }
 
 @keyframes sidebarContent {
@@ -41,15 +59,17 @@ body{
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     margin-left: 0;
-    background-color: rgb(64, 64, 64);
+    background-color: rgb(60, 60, 60);
     animation-name: sidebar;
     animation-duration: 0.7s;
 }
 
 button.sidebarButton{
-    background-color: rgb(64, 64, 64);
+    background-color: transparent;
     animation-name: sidebarContent;
     animation-duration: 1s;
+    app-region:no-drag;
+
 }
 
 button{
@@ -60,6 +80,7 @@ button{
     border: none;
     border-radius: 7px;
     padding: 0.5em;
+    app-region:no-drag;
 }
 
 button:hover{
